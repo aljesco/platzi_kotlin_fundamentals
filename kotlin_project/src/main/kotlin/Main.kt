@@ -55,6 +55,39 @@ fun main(args: Array<String>) {
     }
     println(mensajeCliente)
 
+    // While
+    var contador = 10
+    while (contador > 0) {
+        println("El valor de contador es $contador.")
+        contador --
+    }
+
+    // Do while
+    do {
+        println("Generando un número aleatorio ...")
+        val numeroAleatorio = (0..100).random()
+        println("El número generado es $numeroAleatorio")
+    } while (numeroAleatorio > 50)
+
+    // For
+    val listaDeFrutas = listOf("Manzana", "Pera", "Durazno")
+    for (fruta in listaDeFrutas) {
+        println("Fruta con FOR es $fruta")
+    }
+
+    // El mismo FOR en sintaxis comprimida
+    for (fruta in listaDeFrutas) println("Fruta con FOR comprimido es $fruta")
+
+    // El mismo FOR usando una función anónima
+    listaDeFrutas.forEach { fruta -> println("Fruta con FOREACH es $fruta") }
+
+    // Map
+    val cantidadCaracteresFrutas = listaDeFrutas.map { fruta -> fruta.length }
+    println(cantidadCaracteresFrutas)
+
+    // Función filter
+    val listaFiltrada = cantidadCaracteresFrutas.filter { cantidadCaracteresFruta -> cantidadCaracteresFruta > 5 }
+    println(listaFiltrada)
 
         // Try adding program arguments via Run/Debug configuration.
         // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
